@@ -18,4 +18,17 @@ new CbvaAppPageStack(app, 'CbvaAppPageStack', {
   // env: { account: '123456789012', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+    stackName:"cbvaapp-stack",
+    env: {
+        account: app.node.tryGetContext("environment").prod.account,
+        region: app.node.tryGetContext("environment").prod.region
+    }
+});
+new CbvaAppPageStack(app, 'CbvaAppPageStackDev', {
+
+    stackName:"cbvaapp-stack-dev",
+    env: {
+        account: app.node.tryGetContext("environment").dev.account,
+        region: app.node.tryGetContext("environment").dev.region
+    }
 });

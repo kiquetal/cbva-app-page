@@ -1,0 +1,18 @@
+{
+ "environment":{
+       "prod": {
+         "account": "572553955017",
+         "region": "us-east-1"
+       },
+         "dev": {
+            "account": "572553955017",
+            "region": "us-east-2"
+         }
+
+
+ }
+
+}
+
+
+
